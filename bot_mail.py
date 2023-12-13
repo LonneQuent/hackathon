@@ -1,14 +1,16 @@
 import smtplib
 import pandas as pd
+import time
+import random
 
-# Charger votre fichier CSV ou Excel
-df = pd.read_csv('input à régler')
+df = pd.read_csv('./files/test.csv', delimiter=';')
+print(df.columns)
 
-# Paramètres SMTP
-smtp_server = 'smtp.gmail.com'
+# Paramètres SMTP 587 parce qu'il permet un chiffrement STARTTLS,ca garantit une communication sécurisée entre votre programme Python et les serveurs Gmail.
+smtp_server = 'smtp.office365.com'
 smtp_port = 587
-smtp_username = 'créer mail pour envoyer + git ignore'
-smtp_password = 'mdp à définir'
+smtp_username = 'mettez votre mail'
+smtp_password = 'mettez votre mdp préviligié uncode haché et dans git ignore etc...'
 
 # Fonction pour envoyer un e-mail
 def envoyer_email(destinataire, sujet, corps):
@@ -26,14 +28,18 @@ def envoyer_email(destinataire, sujet, corps):
     finally:
         server.quit()
 
-# Parcourir chaque ligne du DataFrame
+# On applique l'envoie du mail à chacune des lignes de notre fichier
 for index, row in df.iterrows():
     destinataire = row['Email']
-    sujet = 'Sujet de l\'e-mail'
-    corps1 = f"Madame Monsieur,\n\nCeci est un mail ayant pour but d'alerter sur un risque d'innondation."
+    sujet = 'Risque d''innondation'
+    corps = f"Madame Monsieur,\n\nCeci est un mail ayant pour but d'alerter sur un risque d'innondation."
 
-    # Condition pour décider d'envoyer l'e-mail ou non
-    if row['Colonne_condition'] == 'Condition_souhaitee':
+    # Condition pour décider d'envoyer l'e-mail ou non basé sur profondeur de l'eau
+    if row['seuil'] == 'critique':
         envoyer_email(destinataire, sujet, corps)
     else:
-        print(f"Ne pas envoyer d'e-mail à {destinataire} en raison de la condition non remplie.")
+        print(f"Pas d'email {destinataire} parce que pas innondation.")
+
+    # ajout de délais random pour éviter ban !
+    delai_entre_lignes = random.uniform(1, 5)
+    time.sleep(delai_entre_lignes)
