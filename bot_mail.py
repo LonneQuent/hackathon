@@ -30,7 +30,7 @@ def envoyer_email(destinataire, sujet, corps):
 for index, row in df.iterrows():
     destinataire = row['Email']
     sujet = 'Sujet de l\'e-mail'
-    corps = f"Bonjour {row['Nom']},\n\nCeci est un mail ayant pour but d'alerter sur un risque d'innondation au sain de votre centrale.."
+    corps1 = f"Madame Monsieur,\n\nCeci est un mail ayant pour but d'alerter sur un risque d'innondation."
 
     # Condition pour décider d'envoyer l'e-mail ou non
     if row['Colonne_condition'] == 'Condition_souhaitee':

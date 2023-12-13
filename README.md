@@ -1,4 +1,4 @@
-# Hackhaton sens le caca (dixit amel)
+# Weather Wizard (hackathon sent le caca (dixit amel))
 
 Ce projet a été réalisé dans le cadre du hackathon Copernicus et Hetic. L'objectif principal était de créer un bot de mailing capable de suivre l'évolution du niveau de la mer à partir des données satellitaires disponibles sur le site [Copernicus Marine](https://marine.copernicus.eu/).
 
@@ -23,7 +23,10 @@ Dépendances
 Assurez-vous d'installer les dépendances nécessaires en utilisant le gestionnaire de paquets spécifié dans chaque partie du projet.
 
 ## Contributeurs
-Amel
-Jean-Philippe
+Amel Mezemate
+
+Jean-Philippe N'Toumey Bouadan
+
 Mario
+
 Quentin Lonné
