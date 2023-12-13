@@ -9,8 +9,8 @@ print(df.columns)
 # Paramètres SMTP 587 parce qu'il permet un chiffrement STARTTLS,ca garantit une communication sécurisée entre votre programme Python et les serveurs Gmail.
 smtp_server = 'smtp.office365.com'
 smtp_port = 587
-smtp_username = 'mettez votre mail'
-smtp_password = 'mettez votre mdp préviligié uncode haché et dans git ignore etc...'
+smtp_username = 'mettez votre adresse mail'
+smtp_password = 'votre mdp'
 
 # Fonction pour envoyer un e-mail
 def envoyer_email(destinataire, sujet, corps):
@@ -41,5 +41,5 @@ for index, row in df.iterrows():
         print(f"Pas d'email {destinataire} parce que pas innondation.")
 
     # ajout de délais random pour éviter ban !
-    delai_entre_lignes = random.uniform(1, 5)
-    time.sleep(delai_entre_lignes)
+    délais = random.uniform(1, 5)
+    time.sleep(délais)
