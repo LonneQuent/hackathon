@@ -8,7 +8,7 @@ from numpy.ma import masked_array
 
 
 # Ouvrir le fichier NetCDF en mode lecture
-file_path = r'..\SMOC_20230101_R20230111.nc'  #faire un path auto
+file_path = r'./files/bdd_brut.nc'  #faire un path auto
 nc_file = nc.Dataset(file_path, 'r')
 
 # Afficher la liste des variables
@@ -91,7 +91,7 @@ df = pd.DataFrame({
 })
 
 # Sauvegarder le DataFrame au format CSV
-csv_output_path = r'..\donnees.csv' #créer un path 
+csv_output_path = r'./files/bdd.csv' #créer un path 
 df.to_csv(csv_output_path, index=False)
 
 print(f"Données converties avec succès en {csv_output_path}")
