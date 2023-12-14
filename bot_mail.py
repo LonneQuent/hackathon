@@ -6,7 +6,7 @@ import random
 df = pd.read_csv('./files/test.csv', delimiter=';')
 print(df.columns)
 
-# Paramètres SMTP 587 parce qu'il permet un chiffrement STARTTLS,ca garantit une communication sécurisée entre votre programme Python et les serveurs Gmail.
+# Paramètres SMTP 587 parce qu'il permet un chiffrement STARTTLS,ca garantit une communication sécurisée entre votre programme Python et les serveurs mail.
 # GMAIL PAS POSSIBLE ! depuis fin 2022 besoin compte admin etc ...
 smtp_server = 'smtp.office365.com'
 smtp_port = 587
@@ -33,7 +33,7 @@ def envoyer_email(destinataire, sujet, corps):
 for index, row in df.iterrows():
     destinataire = row['Email']
     sujet = 'Risque d''innondation'
-    corps = f"Madame Monsieur,\n\nCeci est un mail ayant pour but d'alerter sur un risque d'innondation."
+    corps = f"Madame Monsieur,\n\n L équipe Weather Wizard vous contact afin de signaler une possible d'innondation.\n\n Bonne journée à vous."
 
     # Condition pour décider d'envoyer l'e-mail ou non basé sur profondeur de l'eau
     if row['seuil'] == 'critique':
