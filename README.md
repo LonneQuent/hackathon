@@ -7,7 +7,7 @@ Le projet est structuré en trois parties distinctes :
 ## 1. Conversion des Données et Data Prep
 Le fichier récupéré au format .cn est converti en .csv. De plus, une phase de préparation des données (Data Prep) est effectuée pour mieux répondre à notre problématique.
 
-## 2. Analyse du Risque d'Inondation
+## 2. Analyse des Risques d'Inondation
 Nous avons développé un code qui analyse le niveau d'augmentation de l'eau et détermine s'il y a un risque d'inondation associé.
 
 ## 3. Notification par Mail
