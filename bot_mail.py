@@ -7,6 +7,7 @@ df = pd.read_csv('./files/test.csv', delimiter=';')
 print(df.columns)
 
 # Paramètres SMTP 587 parce qu'il permet un chiffrement STARTTLS,ca garantit une communication sécurisée entre votre programme Python et les serveurs Gmail.
+#GMAIL pas POSSIBLE ! depuis fin 2022 besoincompte admin etc ...
 smtp_server = 'smtp.office365.com'
 smtp_port = 587
 smtp_username = 'mettez votre adresse mail'
