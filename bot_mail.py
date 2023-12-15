@@ -10,8 +10,8 @@ print(df.columns)
 # GMAIL PAS POSSIBLE ! depuis fin 2022 besoin compte admin etc ...
 smtp_server = 'smtp.office365.com'
 smtp_port = 587
-smtp_username = 'mettez votre adresse mail'
-smtp_password = 'votre mdp'
+smtp_username = 'weatherwizardg7@outlook.fr'
+smtp_password = 'Magical07/12'
 
 # Fonction pour envoyer un e-mail
 def envoyer_email(destinataire, sujet, corps):
