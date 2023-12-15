@@ -1,4 +1,4 @@
-# Weather Wizard (hackathon sent le caca (dixit amel))
+# Weather Wizard
 
 Ce projet a été réalisé dans le cadre du hackathon Copernicus et Hetic. L'objectif principal était de créer un bot de mailing capable de suivre l'évolution du niveau de la mer à partir des données satellitaires disponibles sur le site [Copernicus Marine](https://marine.copernicus.eu/).
 
